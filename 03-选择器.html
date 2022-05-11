@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <ul>
+        <li>1.相同的操作</li>
+        <li>2.相同的操作</li>
+        <li>3.相同的操作</li>
+        <li>4.相同的操作</li>
+        <li>5.相同的操作</li>
+        <li>6.相同的操作</li>
+    </ul>
+    <div>
+        <p>22</p>
+        <p>
+            22
+            <p>2</p>
+        </p>
+    </div>
+    <script>
+        //1.获取四个div
+        $(function() {
+            $("div").css("background","gray");
+        })
+        $(function() {
+            // $('ul li:first').css("color","blue")
+            // $('ul li:eq(2)').css("color","blue")
+            // $('ul li:odd').css("color","red")
+           //1.选择父亲
+           console.log($('p').parent());
+           //2.选择亲儿子
+           $("div").children("p").css("color","red")
+           //3.选择所有的儿子、孙子
+           $("div").find("p").css("color","blue")
+        })
+        //2.设置四个div元素的背景色为粉色
+    </script>
+</body>
+</html>

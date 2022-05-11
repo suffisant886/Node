@@ -1,0 +1,29 @@
+ul li {
+  float: left;
+  margin-left: -1px;
+  list-style: none;
+  width: 80px;
+  height: 40px;
+  border: 1px solid black;
+  line-height: 40px;
+  text-align: center;
+}
+.box li {
+  position: relative;
+}
+.box li:hover {
+  background-color: gray;
+}
+.select {
+  position: absolute;
+  left: -40px;
+}
+.select li {
+  border-color: orange;
+}
+.select li:nth-child(2) {
+  margin-top: -1px;
+}
+.select li:nth-child(3) {
+  margin-top: -1px;
+}
