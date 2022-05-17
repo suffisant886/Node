@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //symbol是一种新的数据类型，类似于字符串不能使用for...in遍历使用Reflect.ownkeys
+        //创建
+        let s=Symbol();
+        let a=Symbol('尚硅谷');
+        let b=Symbol('尚硅谷');
+        console.log(a===b);//false
+        //Symbol.for()函数对象创建
+        let s2=Symbol.for('尚硅谷');
+        let s3=Symbol.for('尚硅谷');
+        console.log(s2===s3);//true
+        //不能与其他数据运算，对比
+
+        //Symbol的应用，给对象添加属性和方法，由于他的独一无二的特性
+        let game={
+            let method={
+                up:Symbol(),
+                down:Symbol()
+            }
+        }
+        game[method.up]=function() {
+            console.log('我可以向上改变形状');
+        }
+        game[method.down]=function() {
+            console.log('我可以快速下降');
+        }
+        console.log(game);
+
+        let youxi={
+            game:'狼人杀',
+            [Symbol('say')]:function() {
+                console.log('我可以发言');
+            },
+            [Symbol('zibao')]:function() {
+                console.log('我自爆了');
+            }
+        }
+        console.log(youxi);
+    </script>
+</body>
+</html>

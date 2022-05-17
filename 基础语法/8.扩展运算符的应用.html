@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const kuaizi = ['王台历','肖央'];
+        const fenghuang =['增益','零花'];
+        const he=kuaizi.concat(fenghuang);
+        console.log(he);
+        //使用扩展运算符
+        const he2=[...kuaizi,...fenghuang];
+        console.log(he2);
+        //...把数组转换为参数序列
+        //应用2数组的克隆
+        //3.将伪数组转换为真正的数组
+        const div=document.querySelectorAll('div');
+        const Div=[...div];
+        //也可以将arguments转换为真正的数组但是有rest参数就不需要  ...args
+    </script>
+</body>
+</html>
