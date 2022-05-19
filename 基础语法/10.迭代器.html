@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const arr=['唐僧','孙悟空','沙僧'];
+        // let iterator=arr[Symbol.iterator]();
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        const banji={
+            name:'终极一班',
+            stus:[
+                'xiaoming',
+                'xiaoning',
+                'xiaotian',
+                'knight'
+            ],
+            [Symbol.iterator]() {
+                //索引遍历
+                let index=0;
+                let that=this;
+                return {
+                    next:function() {
+                        if(index<that.stus.length) {
+                            const result ={
+                                value:that.stus[index],done:false
+                            };
+                            index++;
+                            return result;
+                        }
+                        else {
+                            return {
+                                value:undefined,done:true
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        for(let v of banji) {
+                    console.log(v);
+                }
+    </script>
+</body>
+</html>
