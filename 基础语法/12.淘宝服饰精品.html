@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            width: 300px;
+            height: 304px;
+            border: 1px solid pink;
+            /* background-color: aqua; */
+        }
+        ul li {
+            width: 50px;
+            height: 32px;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        img {
+            position: absolute;
+            width: 248px;
+            height: 286px;
+            top: 6px;
+            left: 53px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="left">
+        <li>女靴</li>
+        <li>雪地靴</li>
+        <li>冬裙</li>
+        <li>呢大衣</li>
+        <li>毛衣</li>
+        <li>棉服</li>
+        <li>女裤</li>
+        <li>羽绒服</li>
+        <li>牛仔裤</li>
+    </ul>
+    <div class="content">
+        <div><a href="#"><img src="../img/1.jpg" alt="" style="z-index: 1;"></a></div>
+        <div><a href="#"><img src="../img/2.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/3.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/4.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/5.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/6.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/7.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/8.jpg" alt=""></a></div>
+        <div><a href="#"><img src="../img/9.jpg" alt=""></a></div>
+    </div>
+    <script>
+        $(function() {
+            $("#left li").mouseover(function() {
+                //得到li的索引号
+                $(this).css("backgroundColor","red")
+                $(this).siblings().css("backgroundColor","")
+                var index=$(this).index();
+                $(".content img").eq(index).css("z-index","3");
+                $(".content img").eq(index).siblings().css("z-index","2");
+                
+            })
+        })
+    </script>
+</body>
+</html>
