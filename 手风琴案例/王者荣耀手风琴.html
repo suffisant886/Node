@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+    
+        }
+        .box {
+            margin: 80px auto;
+            height: 100px;
+            width: 900px;
+            background-color: rgb(10, 10, 130);
+        }
+        .content {
+            
+            width: 750px;
+            background-color: rgb(65, 65, 249,0.5);
+            height: 100px;
+            
+        }
+        ul {
+            position: relative;
+            list-style: none;
+            top:13px;
+        }
+        ul li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 80px;
+        }
+        ul .current {
+            width: 224px;
+        }
+
+        ul .current .small {
+            display: none;
+        }
+        ul li .small {
+            position:absolute;
+            top: 0;
+            right: 0;
+            border-radius: 20%;
+            width: 70px;
+            height: 70px;
+        }
+        ul .current .small {
+            display: none;
+        }
+        ul li .big {
+            display: none;
+        }
+        ul .current .big {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <ul>
+                <li class="current">
+                    <a href="#">
+                        <img src="images/m1.jpg" alt="" class="small">
+                        <img src="images/m.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/l1.jpg" alt="" class="small">
+                        <img src="images/l.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/c1.jpg" alt="" class="small">
+                        <img src="images/c.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/w1.jpg" alt="" class="small">
+                        <img src="images/w.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/z1.jpg" alt="" class="small">
+                        <img src="images/z.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/h1.jpg" alt="" class="small">
+                        <img src="images/h.png" alt="" class="big">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/t1.jpg" alt="" class="small">
+                        <img src="images/t.png" alt="" class="big">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $("li").hover(function() {
+                $(this).stop().animate({
+                    width:224
+                }).find(".small").stop().fadeOut().siblings('.big').stop().fadeIn();
+                $(this).siblings("li").stop().animate({
+                    width:80
+                }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+            })
+        })
+    </script>
+</body>
+</html>
