@@ -1,0 +1,105 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url(./back.jpg) no-repeat;
+            background-size: 100%;
+        }
+        header {
+            color:white;
+            height: 50px;
+            background-color: black;
+            border-radius: 8px;
+        }
+        .middle {
+            margin: auto;
+            width: 680px;
+            height: 100%;
+            /* background-color: aqua; */
+        }
+        section {
+            
+            border-radius: 8px;
+        }
+        section label{
+            line-height:50px;
+            font-size: 30px;
+            vertical-align: middle;
+        }
+        section input {
+            outline: none;
+            margin-left: 50px;
+            width: 450px;
+            height: 30px;
+            border-radius: 15px;
+        }
+        
+
+        footer {
+            color:blue;
+            font-size: 14px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* 北京切换 */
+        nav div {
+            margin-top: 20px;
+            margin-left: 13px;
+            float: left;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgba(19, 160, 207, 0.8);
+        }
+        .thing {
+            margin: 15px 0;
+        }
+        section li {
+            position: relative;
+            border-radius: 5px;
+            border-left: 4px solid green;
+            width: 625px;
+            height: 30px;
+            background-color: white;
+            margin: 10px 0;
+        }
+        section ol {
+            list-style: none;
+        }
+        section ul {
+            list-style: none;
+        }
+        section li input {
+            width: 20px;
+            margin-left: 10px;
+        }
+        section  li a {
+            position: absolute;
+            top: 7px;
+            border-radius: 50%;
+            right: 7px;
+            width: 15px;
+            height: 15px;
+            background-color: rgba(128, 128, 128, 0.5);
+            border: 2px solid rgb(52, 41, 41,0.6);
+        }
+        section li p {
+            position: absolute;
+            top: 4px;
+            left: 40px;
+        }
+        footer {
+            box-sizing: border-box;
+            padding-top: 14px;
+        }
+        section ul li {
+            background-color:rgba(204, 204, 204, 0.8);
+            color: gray;
+            border-left: 4px solid gray;
+        }
+        section ul li a {
+            border: none;
+        }

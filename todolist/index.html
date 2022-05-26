@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/todolist.js"></script>
+ 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </nav>
+        <section class="middle">
+            <label for="title">ToDolist</label>
+            <input type="text" placeholder="添加待办事项" id="title">
+        </section>
+    </header>
+    <section class="middle">
+        <h2 class="thing">要完成的事项<span></span></h2>
+        <ol>
+        </ol>
+        <h2 class="thing">已经完成<span></span></h2>
+        <ul>
+        </ul>
+    </section>
+    <footer class="middle">
+        Learn self-discipline &copy; 2022 todolist.cn
+    </footer>
+ 
+    <script>
+        $(function() {
+            var arr=["'./back2.jpg'","'./back3.jpg'","'./back.jpg'"];
+            $('.one').click(function() {
+                $('body').css("background-image","url("+arr[0]+")")
+            })
+            $('.two').click(function() {
+                $('body').css("background-image","url("+arr[1]+")")
+            })
+            $('.three').click(function() {
+                $('body').css("background-image","url("+arr[2]+")")
+            })
+        })
+    </script>
+</body>
+</html>

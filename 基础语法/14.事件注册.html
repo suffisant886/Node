@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+        }
+        .current {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        //事件处理on
+        // $("div").on({
+        //     mouseenter:function() {
+        //         $(this).css('background','skyblue');
+        //     },
+        //     click:function() {
+        //         $(this).css("background",'red')
+        //     }
+            
+        // })
+        // $("div").on('mouseenter mouseleave',function() {
+        //     // alert('11');
+        //     $(this).toggleClass('current');
+        // })
+        //on可以实现事件委派
+            $(function() {
+                $("ul").on('click','li',function() {
+                    alert('11');
+                })
+            })
+            //on可以给动态添加的元素绑定事件
+            $("ol").on('click','li',function() {
+                alert('112')
+            })
+            var li=$("<li>我是后来创建的</li>")
+            $('ol').append(li)
+
+    </script>
+</body>
+</html>
